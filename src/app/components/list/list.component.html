@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Lista de Usuários</h1>
+  <ul class="list-group">
+    <li *ngFor="let user of users" class="list-group-item d-flex justify-content-between">
+        <a>
+            {{ user.first_name }}
+          <span class="badge">
+            <img [src]="user.avatar">
+          </span>
+        </a>
+    </li>
+  </ul>
+</div>
+
+<pre>
+  {{ users | json }}
+</pre>
