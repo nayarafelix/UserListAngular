@@ -13,4 +13,12 @@ export class CrudService {
   async list() {
     return await this.http.get(this.url).toPromise();
   }
+
+  async getOne(id:string) {
+    return await this.http.get(`${this.url}/${id}`).toPromise();
+  }
+
+  async update(user:object) {
+    return await this.http.put(`${this.url}/${user['id']}`, user). toPromise();
+  }
 }

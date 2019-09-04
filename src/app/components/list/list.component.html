@@ -2,7 +2,7 @@
   <h1>Lista de Usuários</h1>
   <ul class="list-group">
     <li *ngFor="let user of users" class="list-group-item d-flex justify-content-between">
-        <a>
+        <a [href]="'/user/'+user.id">
             {{ user.first_name }}
           <span class="badge">
             <img [src]="user.avatar">
